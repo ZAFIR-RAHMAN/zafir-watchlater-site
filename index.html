@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZAFIR YT WATCH LATER ORGANIZER</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background: #0b0f19; color: #e7e9ee; }
+    main { max-width: 860px; margin: 0 auto; padding: 48px 20px 80px; }
+    h1 { font-size: 32px; margin: 0 0 12px; letter-spacing: 0.2px; }
+    p.lead { font-size: 18px; color: #b9c0d0; line-height: 1.6; margin: 0 0 22px; }
+    h2 { font-size: 18px; margin: 32px 0 8px; color: #ffffff; }
+    ul { padding-left: 22px; }
+    li { margin: 6px 0; }
+    code { background: #101623; border: 1px solid #1f2737; padding: 2px 6px; border-radius: 6px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 14px; }
+    a { color: #7aa7ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .notice { background: #111827; border: 1px solid #1f2737; padding: 14px 16px; border-radius: 10px; font-size: 14px; color: #b9c0d0; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>ZAFIR YT WATCH LATER ORGANIZER</h1>
+  <p class="lead">Personal YouTube Watch Later organizer with offline export, semantic clustering, and playlist repopulation.</p>
+
+  <h2>Why this exists</h2>
+  <p class="lead">YouTube’s Watch Later is a flat list without real categories. This project automates the boring part: export the full list, group videos by topic, then recreate organized private playlists in your own account.</p>
+
+  <h2>Quick start</h2>
+  <ol>
+    <li>Install dependencies: <code>uv pip install google-api-python-client google-auth-oauthlib google-auth-httplib2 sentence-transformers scikit-learn</code></li>
+    <li>Authorize YouTube account(s): <code>python setup_auth.py --account 1</code> and <code>python setup_auth.py --account 2</code></li>
+    <li>Export Watch Later: <code>python fetch_watch_later.py</code></li>
+    <li>Build categories: <code>python build_category_map.py</code></li>
+    <li>Stage classification: <code>python apply_categories.py</code></li>
+    <li>Create YouTube playlists: <code>python create_playlists.py</code></li>
+  </ol>
+
+  <h2>Tech stack</h2>
+  <ul>
+    <li>Python</li>
+    <li>Google OAuth 2.0</li>
+    <li>YouTube Data API v3</li>
+    <li>sentence-transformers</li>
+    <li>scikit-learn</li>
+    <li>yt-dlp</li>
+  </ul>
+
+  <h2>Privacy</h2>
+  <div class="notice">This is a personal/local tool for one or two authenticated users. It does not collect telemetry.</div>
+  <p style="margin-top:10px;"><a href="privacy.html">Privacy policy</a></p>
+</main>
+</body>
+</html>
